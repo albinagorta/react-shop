@@ -18,10 +18,14 @@ const App = () => {
       <React.Fragment>
         <BrowserRouter>
           <Routes>
-              <Route exact path="/" element={<Home/>}></Route>
-              <Route exact path="/login" element={<Login />} />
-              <Route exact path="/recovery-password" element={<RecoveryPassword />} />
+              <Route exact path="/" element={ <Home/>}/>
+
+              <Route exact path="/login" element={ <Login/>}/>
+              
+              <Route exact path="/recovery-password" element={ <RecoveryPassword/>}/>
+
               <Route path="*" element={<NotFound/>} />
+
           </Routes>
         </BrowserRouter>
         </React.Fragment>
