@@ -10,7 +10,7 @@ module.exports = {
         publicPath: '/'
     },
     mode: 'development',
-    resolve:{
+    resolve: {
         extensions: ['.js', '.jsx']
     },
     module: {
@@ -24,16 +24,16 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use:[
+                use: [
                     {
-                        loader:'html-loader'
+                        loader: 'html-loader'
                     }
                 ]
             },
             {
                 //test: /\.s[ac]ss$/i,
                 test: /\.(css|scss)$/i,
-                use:[
+                use: [
                     "style-loader",
                     "css-loader",
                     "sass-loader"
@@ -43,21 +43,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template:'./public/index.html',
-            filename:'./index.html',
+            template: './public/index.html',
+            filename: './index.html',
         }),
         new MiniCssExtractPlugin({
-            filename:'[name].css'
+            filename: '[name].css'
         }),
     ],
     devServer: {
         //contentBase: path.join(__dirname, 'dist'),
         //allowedHosts: path.join(__dirname, 'dist'),
         /*static: {
-            directory: path.join(__dirname, 'public'),
-          },*/
-       compress: true,
-       port: 3005,
+            directory: path.join(__dirname, 'public'),},*/
+        compress: true,
+        port: 3005,
         historyApiFallback: true,
     }
 }

@@ -14,20 +14,20 @@ import NotFound from "../pages/NotFound";
 import '../styles/global.css';
 
 const App = () => {
-    return (
-      <React.Fragment>
-        <BrowserRouter>
+  return (
+    <React.Fragment>
+      <BrowserRouter>
         <Layout>
           <Routes>
-              <Route exact path="/" element={ <Home/>}/>
-              <Route exact path="/login" element={ <Login/>}/>
-              <Route exact path="/recovery-password" element={ <RecoveryPassword/>}/>
-              <Route path="*" element={<NotFound/>} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/recovery-password" element={<RecoveryPassword />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
-          </Layout>
-        </BrowserRouter>
-        </React.Fragment>
-    );
+        </Layout>
+      </BrowserRouter>
+    </React.Fragment>
+  );
 }
 
 export default App;
