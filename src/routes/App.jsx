@@ -19,9 +19,17 @@ import NotFound from "@pages/NotFound";
 //styles
 import '@styles/global.css';
 
+//context
+import AppContext from "@context/AppContext";
+
+//hooks
+import useInitialState from "@hooks/useInitialState";
+
+
 const App = () => {
+  const initialState = useInitialState();
   return (
-    <React.Fragment>
+    <AppContext.Provider value = {initialState}>
       <BrowserRouter>
         <Layout>
           <Routes>
@@ -39,7 +47,7 @@ const App = () => {
           </Routes>
         </Layout>
       </BrowserRouter>
-    </React.Fragment>
+    </AppContext.Provider>
   );
 }
 
