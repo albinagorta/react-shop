@@ -3,6 +3,7 @@ import '@styles/Header.scss';
 
 import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
+import CategoriaList from '@containers/CategoriaList';
 
 import icon_menu from '@icons/icon_menu.svg';
 import icon_shopping_cart from '@icons/icon_shopping_cart.svg';
@@ -38,26 +39,7 @@ const Header = () => {
 			<img src={icon_menu} alt="menu" className="menu" />
 			<div className="navbar-left">
 				<img src={logo_yard_sale} alt="logo" className="nav-logo" />
-				<ul>
-					<li>
-						<a href="/">All</a>
-					</li>
-					<li>
-						<a href="/">Clothes</a>
-					</li>
-					<li>
-						<a href="/">Electronics</a>
-					</li>
-					<li>
-						<a href="/">Furnitures</a>
-					</li>
-					<li>
-						<a href="/">Toys</a>
-					</li>
-					<li>
-						<a href="/">Others</a>
-					</li>
-				</ul>
+				<CategoriaList/>
 			</div>
 			<div className="navbar-right">
 				<ul>
