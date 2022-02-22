@@ -1,10 +1,18 @@
 
-import React from 'react';
+import React , { useContext }from 'react';
+
+import AppContext from '@context/AppContext';
 
 const CategoriaItem = ({ cat }) => {
+    const State = useContext( AppContext );
+
+	const handleClick = item => {
+		State.setCategories(item.id);
+	}
+
     return (
         <li>
-                <a href="">{cat.name}</a>
+            <a href="#" onClick={ () => handleClick(cat) }>{cat.name}</a>
         </li>
     );
 }

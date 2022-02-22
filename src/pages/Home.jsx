@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ProductList from '@containers/ProductList';
 
+import AppContext from '@context/AppContext';
+
 const Home = () => {
+	const State = useContext( AppContext );
+	//console.log(State);
 	return (
 		<>
-			<ProductList />
+			<ProductList productApi={ State.productApi } />
 		</>
 	);
 }
