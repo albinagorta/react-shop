@@ -38,7 +38,8 @@ const Header = () => {
 		<nav>
 			<img src={icon_menu} alt="menu" className="menu" />
 			<div className="navbar-left">
-				<img src={logo_yard_sale} alt="logo" className="nav-logo" />
+			
+			<img src={logo_yard_sale} alt="logo" className="nav-logo" />
 				<CategoriaList/>
 			</div>
 			<div className="navbar-right">
@@ -46,6 +47,7 @@ const Header = () => {
 					<li className="navbar-email" onClick={handleToggle}>
 					avideait@example.com
 					</li>
+					
 					<li className="navbar-shopping-cart"  onClick={handleToggleOrders}>
 						<img src={icon_shopping_cart} alt="shopping cart" />
 						{ verifyCart(state.cart.length) }
